@@ -92,12 +92,12 @@ docs/             PLAN-v3 (strategy + pitch), verified answers
 
 ## Try it
 
-**Live demo (no login):** https://rxgene.vercel.app
+**Live demo (no login):** https://rxgene-pink.vercel.app
 
-- Sarah, the main case (fluoxetine + codeine → "Avoid codeine"): https://rxgene.vercel.app/?patient=sarah&add=codeine
-- Marcus, already a poor metabolizer (one precise alert, not two): https://rxgene.vercel.app/?patient=marcus&add=codeine
-- Lena, the reverse case (adding fluoxetine re-alerts the codeine she already takes): https://rxgene.vercel.app/?patient=lena&add=fluoxetine
-- The CDS Hooks service an EHR calls: https://rxgene.vercel.app/cds-services
+- Sarah, the main case (fluoxetine + codeine → "Avoid codeine"): https://rxgene-pink.vercel.app/?patient=sarah&add=codeine
+- Marcus, already a poor metabolizer (one precise alert, not two): https://rxgene-pink.vercel.app/?patient=marcus&add=codeine
+- Lena, the reverse case (adding fluoxetine re-alerts the codeine she already takes): https://rxgene-pink.vercel.app/?patient=lena&add=fluoxetine
+- The CDS Hooks service an EHR calls: https://rxgene-pink.vercel.app/cds-services
 
 All patients are synthetic.
 
@@ -114,7 +114,7 @@ npm run dev        # UI + API on http://localhost:5173 (copies ../data into src/
 - **Tests:** `npm test` (expected-output fixtures, edge cases, API handlers).
 - **Production build:** `npm run build`.
 - **AI patient summary (optional):** `cp .env.example .env` in `web/` and set `LLM_BASE_URL`, `LLM_API_KEY` (any OpenAI-compatible endpoint) and `LLM_MODEL`. Without them the app still works and shows the fixed template.
-- **Check a deployment end to end:** `python3 scripts/check_live.py https://rxgene.vercel.app` from the repo root.
+- **Check a deployment end to end:** `python3 scripts/check_live.py https://rxgene-pink.vercel.app` from the repo root.
 - **Refresh the data snapshots:** `python3 scripts/fetch_cpic.py` and `python3 scripts/fetch_openfda.py`.
 
 How Kiro was used to build it: [KIRO.md](KIRO.md).
